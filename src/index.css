@@ -1,0 +1,400 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  margin: 0 auto;
+  border: 1px solid #007d9354;
+  border-radius: 24px;
+  padding: 24px;
+  background-color: white;
+  width: 100%;  
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+@media (max-width: 460px) {
+  #root{
+    padding: 10px;
+  }
+}
+
+/* Inputs */
+input, textarea, select {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #005564;
+  color: #fff;
+  border: 0;
+  height: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+textarea {
+  height: 120px;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+td {
+  padding: 10px;
+}
+
+a {
+  font-weight: 500;
+  color: #007d93;
+  text-decoration: inherit;
+}
+
+a:hover { color: #005564; }
+
+.all-images {
+  /* max-width: 100%;
+  height: auto;
+  width: 120%; تكبير عرض الصورة بنسبة 120% */
+  width: 222px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 20px; /* إضافة مسافة من اليسار */
+  margin-right: 20px; /* إضافة مسافة من اليمين */
+
+}
+
+.single-image {
+  width: 330px;
+  height: 500px;
+  object-fit: cover; /* لضمان ملء الصورة بالكامل داخل الأبعاد المحددة */
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f1f6f4;
+  padding-top: 4rem;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid #007d9354;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid #007d9354;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Books */
+ul.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+
+  /* display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 10px; */
+}
+
+ul.books li {
+  flex: 1 0 21%;
+}
+
+ul.books li a {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.books img {
+  max-height: 200px;
+  border-radius: 5px;
+}
+
+ul.books h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.bookdetails {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 0 auto;
+}
+
+.col-1, .col-2 {
+  padding: 10px; /* لإضافة مساحة حول العناصر، يمكنك تعديل القيمة حسب الحاجة */
+}
+
+@media (max-width: 768px) {
+  .bookdetails {
+    /* grid-template-columns: 1fr; جعل كل عنصر يأخذ العرض الكامل عند الشاشات الصغيرة */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .col-2 {
+    /* text-align: center; */
+  }
+}
+
+.filters {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.delete {
+  border: 0;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  padding: 0 4px;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+.col-3 {
+  flex-basis: 40%;
+}
+.col-4 {
+  flex-basis: 60%;
+}
+
+.success-message {
+  color: #fff;
+  background-color: #28a745;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+
+
+
+.create-book-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-upload-container {
+  margin-bottom: 20px;
+}
+
+.image-upload-label {
+  font-weight: bolder;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.single-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.image-input {
+  display: block;
+}
+
+.form-fields-container {
+  margin-top: 20px;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .create-book-container {
+    padding: 10px;
+  }
+
+  .image-upload-label {
+    font-size: 18px;
+  }
+
+  .single-image {
+    max-width: 150px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+
+.edit-book-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.edit-book-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.edit-book-description {
+  margin-bottom: 20px;
+}
+
+.delete-button {
+  margin-bottom: 20px;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.edit-book-form {
+  margin-top: 10px;
+}
+.image-upload-container {
+  margin-bottom: 20px;
+}
+
+.image-upload-label {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* .thumbnail-preview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+} */
+.thumbnail-preview {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.image-input {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-fields-container {
+  margin-top: 20px;
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.categories-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.categories-select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.category-menu-item {
+  font-weight: normal;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
